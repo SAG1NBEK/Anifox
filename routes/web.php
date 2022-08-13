@@ -73,6 +73,9 @@ Route::get('/anime/{anime}', [HomeController::class, 'showAnime'])->name('animeS
 Route::post('/comments/add', [HomeController::class, 'addComment'])->name('comments.add');
 // Get Like
 Route::get('anime/{statusId}/like', [HomeController::class, 'getLike'])->middleware('auth')->name('episode.like');
+
+// Episodes
+Route::get('/anime/{anime}/{season_id}/{episode_slug}/', [HomeController::class, 'getEpisodeBySeason'])->name('showEpisode');
 // Season
 Route::get('anime/{anime}/{season_id}/', [HomeController::class, 'getAnimeBySeason'])->name('showSeason');
 // Category
@@ -81,5 +84,4 @@ Route::get('/category/{id}', [HomeController::class, 'getProductsByCategory'])->
 Route::get('/type/{id}', [HomeController::class, 'getProductsByType'])->name('showType');
 // Date
 Route::get('/date/{id}', [HomeController::class, 'getProductsByDate'])->name('showDate');
-// Episodes
-Route::get('/anime/{anime}/{season_id}/{episode_slug}/', [HomeController::class, 'getEpisodeBySeason'])->name('showEpisode');
+

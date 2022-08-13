@@ -30,6 +30,10 @@
                     <input type="text" name="slug" class="form-control" id="product-slug" value="{{ old('slug') }}">
                 </div>
                 <div class="form-group">
+                    <label for="product-title">Anime Slug</label>
+                    <input type="text" name="anime_slug" class="form-control" id="anime_slug" placeholder="Naruto 1 episode" value="{{ old('title') }}">
+                </div>
+                <div class="form-group">
                     <label for="product-description">Description</label>
                     <textarea name="description" class="form-control" id="product-description" rows="3">{{ old('description') }}</textarea>
                 </div>

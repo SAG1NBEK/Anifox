@@ -92,9 +92,12 @@ class HomeController extends Controller
     }
 
     public function getEpisodeBySeason($anime_slug, $season_id, $episode_slug) {
-        $episode = Episode::where('slug', $episode_slug)->first();
+        $episode = Episode::where('slug', $episode_slug)->where('anime_slug', $anime_slug)->first();
 
-        return view('home.episode.index', ['episode' => $episode]);
+        return view('home.episode.index', [
+            'episode'    => $episode,
+            'anime_slug' => $anime_slug,    
+        ]);
     }
 
     public function profile()

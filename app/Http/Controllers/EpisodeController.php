@@ -47,6 +47,7 @@ class EpisodeController extends Controller
             'slug'        => 'required',
             'description' => 'required',
             'video_code'  => 'required',
+            'anime_slug'  => 'required',
         ]);
         unset($data['season_id']);
         $model = new Episode();

@@ -14,6 +14,7 @@ class Episode extends Model
         'description',
         'video_code',
         'slug',
+        'anime_slug',
     ];
 
     public function seasons(): \Illuminate\Database\Eloquent\Relations\BelongsToMany
